@@ -1311,8 +1311,13 @@
         "signature": "ea1c4783c6622473a62fccd9b4ae61a34ba8ef2e1561f6f66d0260cdd232b10e",
         "affectsGlobalScope": false
       },
+      "../src/mongo.config.ts": {
+        "version": "8fee6ddb6657c91fb0e0311d65e346d003c6ca5709d7502d5625dbec85a89d56",
+        "signature": "16721bab13c0fc84d28a5eb00eac24fcf7096e68f3ce8b160884f74c2318b331",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "654cab5165d62d8d08452e5cb7ad13973cacb30fb5c0bdc79ad23369b06a9f90",
+        "version": "d87b35ec2bdb99c6b645478972f863ae568cbdeaac0204caef3cfaeaff5cb09a",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88",
         "affectsGlobalScope": false
       },
@@ -3463,6 +3468,7 @@
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
+        "../src/mongo.config.ts",
         "../src/tasks/tasks.module.ts"
       ],
       "../src/app.service.ts": [
@@ -5354,6 +5360,7 @@
       "../src/app.module.ts",
       "../src/app.service.ts",
       "../src/main.ts",
+      "../src/mongo.config.ts",
       "../src/tasks/schemas/task.schema.ts",
       "../src/tasks/shared/task.service.ts",
       "../src/tasks/shared/task.ts",

@@ -1,14 +1,17 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TasksModule } from './tasks/tasks.module';
 
-import { MongooseModule } from '@nestjs/mongoose';
+import { mongoConfig }  from './mongo.config';
+
 
 @Module({
   imports: [
     TasksModule,
-    MongooseModule.forRoot('mongodb+srv://ze-nto:wEU2VpFXpLSfKuc@cluster0.rxeml.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+    MongooseModule.forRoot(mongoConfig.apiString)
   ],
   controllers: [AppController],
   providers: [AppService],

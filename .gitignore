@@ -39,3 +39,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#Arquivo COnfiguração
+/todo-list/src/mongo.config.ts

@@ -8,17 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
+const mongoose_1 = require("@nestjs/mongoose");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const tasks_module_1 = require("./tasks/tasks.module");
-const mongoose_1 = require("@nestjs/mongoose");
+const mongo_config_1 = require("./mongo.config");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [
             tasks_module_1.TasksModule,
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://ze-nto:wEU2VpFXpLSfKuc@cluster0.rxeml.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+            mongoose_1.MongooseModule.forRoot(mongo_config_1.mongoConfig.apiString)
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
