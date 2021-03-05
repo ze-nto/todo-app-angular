@@ -32,7 +32,6 @@ export class TaskFormComponent implements OnInit {
 
   onSubmit(){
     this.taskService.save(this.task).subscribe(task =>{
-
       this.router.navigate(['']);
     })
   }

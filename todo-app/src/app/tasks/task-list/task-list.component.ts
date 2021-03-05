@@ -19,4 +19,11 @@ export class TaskListComponent implements OnInit {
       });
   }
 
+  onTaskDeleted(task: Task){
+    if(task){
+      const index = this.tasks.findIndex((taskItem) => taskItem._id == task._id);
+      this.tasks.splice(index, 1)
+    }
+  }
+
 }

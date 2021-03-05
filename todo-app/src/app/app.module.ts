@@ -9,13 +9,21 @@ import { TaskListItemComponent } from './tasks/task-list-item/task-list-item.com
 import { TaskFormComponent } from './tasks/task-form/task-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './account/login/login.component';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { HomeComponent } from './layout/home/home.component';
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     TaskListItemComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    LoginComponent,
+    CreateAccountComponent,
+    HomeComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,

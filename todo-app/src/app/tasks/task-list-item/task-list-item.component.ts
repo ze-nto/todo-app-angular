@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { EventEmitter, Component, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/tasks/shared/task';
 import { TaskService } from 'src/app/tasks/shared/task.service';
 
@@ -12,6 +12,9 @@ export class TaskListItemComponent implements OnInit {
   @Input()
   task: Task;
 
+  @Output()
+  onDeleteTask = new EventEmitter();
+
 
   constructor(
     private taskService: TaskService
@@ -21,11 +24,15 @@ export class TaskListItemComponent implements OnInit {
   }
 
   remove(task: Task){
-    this.taskService.delete(task._id)
+    this.taskService.delete(task._id).subscribe(() => {
+      this.onDeleteTask.emit(task);
+    })
   }
 
   onCompletedCheckChange(task: Task){
-    this.taskService.save(task);
+    this.taskService.save(task).subscribe(task => {
+    });
   }
 
+  
 }
