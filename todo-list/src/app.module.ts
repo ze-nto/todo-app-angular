@@ -12,7 +12,7 @@ import { mongoConfig }  from './mongo.config';
   imports: [
     TasksModule,
     MongooseModule.forRoot(mongoConfig.apiString)
-  ],
+],
   controllers: [AppController],
   providers: [AppService],
 })
